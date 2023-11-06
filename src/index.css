@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.custom-shadow {
+  box-shadow: 0px 4px 16px 0px rgba(16, 24, 53, 0.12);
+}
+.custom-shadow-2 {
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.primary-color {
+  color: #c8bcf6;
+}
+.primary-background {
+  background-color: #c8bcf6;
+}
+
+.primary-border-color {
+  border: 1px solid #c8bcf6;
+}
+
+.secondary-color {
+  color: #f5f5f5;
+}
+.secondary-background {
+  background-color: #f5f5f5;
+}
+
+/* styles.css */
+#small-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #9f7aea; /* Purple color for the thumb */
+  cursor: pointer;
+}
+
+#small-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #888; /* Purple color for the thumb */
+  cursor: pointer;
+  /* scrollbar-color: #9f7aea; */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  max-height: 3px !important;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  /* background: #9f7aea; */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  /* background: #888; */
+  border-radius: 50px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9f7aea;
+}
+
+#dwv {
+  height: 90%;
+}
+
+.button-row {
+  text-align: center;
+}
+
+/* Layers */
+.layerGroup {
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 90%;
+}
+.layer {
+  position: absolute;
+  pointer-events: none;
+}
+.drawDiv {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* drag&drop */
+.dropBox {
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+  width: 50%;
+  height: 75%;
+}
+.dropBoxBorder {
+  border: 5px dashed #e8eaf6; /*indigo:light*/
+}
+.dropBoxBorder.hover {
+  border: 5px dashed #3f51b5; /*indigo*/
+}
+
+#input-file-link {
+  text-decoration-line: underline;
+}
+
+/* .cornerstone-canvas {
+  max-width: 300px;
+} */
+
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start align-top;
+  }
+
+  .flex-col-start {
+    @apply flex flex-col justify-start align-top;
+  }
+
+  .flex-col-between {
+    @apply flex flex-col justify-between align-middle;
+  }
+  .flex-col-center {
+    @apply flex flex-col justify-center align-middle;
+  }
+
+  /*===================================== Colors  =====================================*/
+  .background-light850_dark100 {
+    @apply bg-light-850 dark:bg-dark-100;
+  }
+
+  .background-light900_dark200 {
+    @apply bg-light-900 dark:bg-dark-200;
+  }
+
+  .background-light900_dark300 {
+    @apply bg-light-900 dark:bg-dark-300;
+  }
+
+  /*===================================== Fonts  =====================================*/
+  .h1-bold {
+    @apply text-[22px] font-openSans font-bold leading-[42px] tracking-tighter;
+  }
+
+  .h2-bold {
+    @apply text-[20px]  font-openSans font-bold leading-[31.2px];
+  }
+
+  .h2-semibold {
+    @apply text-[20px]  font-openSans font-semibold leading-[31.2px];
+  }
+
+  .h3-bold {
+    @apply text-[18px]  font-openSans font-bold leading-[26px];
+  }
+
+  .h3-semibold {
+    @apply text-[18px]  font-openSans font-semibold leading-[24.8px];
+  }
+
+  .base-medium {
+    @apply text-[16px]  font-openSans font-medium leading-[25.2px];
+  }
+
+  .base-semibold {
+    @apply text-[16px]  font-openSans font-semibold leading-[25.2px];
+  }
+
+  .base-bold {
+    @apply text-[16px]  font-openSans font-bold leading-[140%];
+  }
+
+  .paragraph-regular {
+    @apply text-[14px]  font-openSans font-normal leading-[22.4px];
+  }
+
+  .paragraph-medium {
+    @apply text-[14px]  font-openSans font-medium leading-[22.4px];
+  }
+
+  .paragraph-semibold {
+    @apply text-[14px]  font-openSans font-semibold leading-[20.8px];
+  }
+
+  .body-regular {
+    @apply text-[12px]  font-openSans font-normal leading-[19.6px];
+  }
+
+  .body-light {
+    @apply text-[12px]  font-openSans font-light leading-[19.6px];
+  }
+
+  .body-medium {
+    @apply text-[12px] font-openSans font-medium leading-[18.2px];
+  }
+
+  .body-semibold {
+    @apply text-[12px]  font-openSans font-semibold leading-[18.2px];
+  }
+}
